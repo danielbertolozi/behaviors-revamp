@@ -1,0 +1,21 @@
+{
+  "name": "behaviors-revamp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "build": "rm -rf ./dist; tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.1",
+    "typescript": "^3.9.7"
+  },
+  "mocha": {
+    "recursive": true,
+    "spec": "./src/test/**/*.js"
+  }
+}
