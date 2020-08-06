@@ -21,7 +21,7 @@ The original implementation relied on Javascript Promises to execute the cascade
 Actions were instanced in a decorator-like fashion – the inner child would be a default class which kickstarted the process and handled errors. Execution order was inner=>outmost.
 
 ```typescript
-const action = new MyLastAction(new MiddleAction(new BaseAction()));
+const action = new TellUserItsDone(new DoSomethingSpecific(new BaseAction()));
 ```
 
 On runtime, it would first go through all behaviors (like in a LinkedList, from child to parent) and execute it. Each behavior then returned a Promise which would be resolved as soon as something was completed (a request, user input, et cetera).
