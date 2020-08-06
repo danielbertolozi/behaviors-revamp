@@ -7,7 +7,9 @@ export class Action {
   public addBehavior(behavior: Behavior): void {
     this.behaviors.push(behavior);
   }
-  public execute(): void {
-    this.behaviors.forEach((b) => b.run(this.context));
+  public async execute(): Promise<void> {
+    for (const behavior of this.behaviors) {
+      await behavior.run(this.context);
+    }
   }
 }

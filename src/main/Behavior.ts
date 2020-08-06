@@ -1,5 +1,5 @@
 import { Context } from "./Context";
 
 export interface Behavior {
-  run(state: Context): void;
+  run(state: Context): Promise<void>;
 }

@@ -44,7 +44,7 @@ Extensibility was hard too – it was assumed at first that each behavior would 
 
 WIP.
 
-- [ ] Async support (probably handle every behavior as if they were async)
+- [x] Async support (probably handle every behavior as if they were async)
 - [ ] Support for error state
 - [ ] Support for falling back to previous behaviors
 - [ ] Support for branching
