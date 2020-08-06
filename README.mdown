@@ -1,10 +1,14 @@
 # Behaviors Revamp
 
+Welcome to this repo. This will compile lessons learned from a past project, from an architecture stand-point of a specific feature.
+
+That feature, although working, was complex, hard to maintain and to learn how to implement correctly – something that shouldn't happen when you have more than 3 people involved in a project.
+
 ## Background
 
 Once, in a previous project, there was a requirement involving Workflow Actions an user could do (e.g. send a document for review, assign to someone else, approve, reject, publish).
 
-As most of these were alike, an abstraction was made – however, it didn't scale well. This is a lessons learned from that time (over a year ago).
+As most of these were alike, an abstraction was made – however, it didn't scale well.
 
 ## Requirements
 
@@ -29,3 +33,19 @@ On runtime, it would first go through all behaviors (like in a LinkedList, from 
 A design issue rose as soon as it was needed to be able to rollback to a specific behavior: JS Promises only have three states: Pending, Rejected and Fulfilled (I'm ignoring Settled on purpose).
 
 When a promise is set to Fulfilled or Rejected, it **cannot** change its state anymore.
+
+### Main issues
+
+Maintenance was tough, as most of the inner workings were complicated. As it was based over promises, at its core, it was a Promise hell.
+
+Extensibility was hard too – it was assumed at first that each behavior would be independent, but then they became dependent on other's results.
+
+## Revamped Implementation
+
+WIP.
+
+- [ ] Async support (probably handle every behavior as if they were async)
+- [ ] Support for error state
+- [ ] Support for falling back to previous behaviors
+- [ ] Support for branching
+- [ ] Support for interrupting cascade
