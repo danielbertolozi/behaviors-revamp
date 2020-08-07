@@ -38,7 +38,7 @@ When a promise is set to Fulfilled or Rejected, it **cannot** change its state a
 
 What really happened? **Workarounds**.
 
-Although we aren't here to find excuses – but to look at what went wrong and avoid these mistakes in the future – we can't forget that sometimes projects have aggressive timelines. Projects also, sometimes, have estimation issues. Plus political issues. So that can come together with a troubled implementation and bring caos.
+Although we aren't here to find excuses – but to look at what went wrong and avoid these mistakes in the future – we can't forget that sometimes projects have aggressive timelines. Projects also, sometimes, have estimation issues. Plus political issues. So that can come together with a problematic implementation and bring caos.
 
 ### Main issues
 
