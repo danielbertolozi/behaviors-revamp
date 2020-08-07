@@ -34,6 +34,11 @@ A design issue rose as soon as it was needed to be able to rollback to a specifi
 
 When a promise is set to Fulfilled or Rejected, it **cannot** change its state anymore.
 
+**The ideal solution?** Re-design it.
+What really happened? **Workarounds**.
+
+Although we aren't here to find excuses – but to look at what went wrong and avoid these mistakes in the future – we can't forget that sometimes projects have aggressive timelines. Projects also, sometimes, have estimation issues. Plus political issues. So that can come together with a troubled implementation and bring caos.
+
 ### Main issues
 
 Maintenance was tough, as most of the inner workings were complicated. As it was based over promises, at its core, it was a Promise hell.
